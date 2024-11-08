@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="img/LogoOficial.png" alt="Logo Florería" class="logo">
+                </a>
+                <div class="brand-name">
+                    <h1>Creaciones y Detalles Rosas Eternas</h1>
+                    <span class="slogan">Las flores más hermosas para cada ocasión, incentivando a la protección del medio ambiente
+                        con cada uno de nuestros productos, siempre manteniendo la calidad con los materiales de 
+                        reciclaje que se ocupan en cada uno de ellos.</span>
+                </div>
+            </div>
+            <button id="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    
+        <h1></h1>
+        <p>
+        </p>
+        <button id="menu-toggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="contenedor">
+        <div class="page-header">
+            <h2>Nuestro Catálogo</h2>
+            <div class="filtros">
+                <a href="index.html">
+                    <button class="filter-btn" type="button">Inicio</button>
+                </a>
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="rosas">Rosas</button>
+                <button class="filter-btn" data-filter="arreglos">Arreglos</button>
+                <button class="filter-btn" data-filter="ocasiones">Ocasiones Especiales</button>
+            </div>
+        </div>
+        
+        <div class="catalogo-grid">
+            <!-- Ejemplos de productos -->
+            <div class="producto-card" data-categoria="rosas">
+                <img src="Img/Rosas.jpg" alt="Rosas Rojas" class="producto-img">
+                <div class="producto-info">
+                    <h3>Ramo de Rosas Rojas</h3>
+                    <p>Docena de rosas rojas premium</p>
+                    <span class="precio">$30.00</span>
+                    <button class="btn-comprar">Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Más productos... -->
+        </div>
+    </div>
+    <script src="/scripts/script.js"></script>
+</body>
+</html>

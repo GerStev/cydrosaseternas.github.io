@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --primary-color: #ffe23fd0;
+    --secondary-color: #9d8606;
+    --third-color: black;
+    --text-color: #790606;
+    --background-color: #f5f5f5;
+    --card-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body {
+    background: var(--third-color);
+    min-height: 100vh;
+    position: relative;
+}
+
+header {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: var(--card-shadow);
+    position: relative;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: clamp(50px, 10vw, 80px);
+    height: clamp(50px, 10vw, 80px);
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.brand-name h1 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    margin: 0;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.slogan {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    opacity: 0.9;
+}
+
+header h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+footer{ 
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: var(--card-shadow);
+    position: relative;
+}
+
+footer a{
+    color: var(--third-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: clamp(1.2rem, 1.5vw, 1rem);
+}
+
+footer a:hover{
+    background: var(--third-color);
+    color: rgb(237, 199, 29);
+    transform: translateY(-2px);
+}
+
+nav {
+    background: white;
+    padding: 1rem;
+    box-shadow: var(--card-shadow);
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: clamp(1.5rem, 3vw, 2rem);
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: clamp(1.2rem, 1.5vw, 1rem);
+}
+
+nav a.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+nav a:hover {
+    background: var(--primary-color);
+    color: rgb(0, 0, 0);
+    transform: translateY(-2px);
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: rem auto;
+    padding: 0 1rem;
+}
+
+.flores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    padding: 2rem 0;
+}
+
+.flor-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flor-card:hover {
+    transform: translateY(-10px);
+}
+
+.flor-img {
+    width: 100%;
+    height: clamp(200px, 30vw, 250px);
+    object-fit: cover;
+}
+
+.flor-info {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.flor-info h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.8rem, 2vw, 1.3rem);
+}
+
+.flor-info p {
+    color: #666;
+    font-size: clamp(1.2rem, 1.5vw, 1rem);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.btn-comprar {
+    display: inline-block;
+    background: var(--third-color);
+    color: var(--primary-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    align-self: start;
+}
+
+.btn-comprar:hover {
+    background: var(--second-color);
+    transform: scale(1.05);
+    color: var(--third-color)
+}
+
+/* Estilos para la página de catálogo */
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Estilos para la página de contacto */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Estilos para la página Sobre Nosotros */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.valores-list {
+    list-style: none;
+    padding: 0;
+}
+
+.valores-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .header-container {
+        padding: 0.5rem 1rem;
+    }
+
+    .logo-container {
+        gap: 0.5rem;
+    }
+
+    .brand-name h1 {
+        font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+
+    .slogan {
+        font-size: clamp(0.7rem, 2vw, 0.9rem);
+    }
+
+    .menu-toggle {
+        z-index: 100;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        padding: 0;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 1rem;
+    }
+
+    .flores-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .contacto-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        border-width: 2px;
+    }
+
+    .brand-name {
+        max-width: 150px;
+    }
+
+    .flores-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .flor-card {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .btn-comprar {
+        width: 100%;
+    }
+}
+
+/* Ajustes para pantallas grandes */
+@media screen and (min-width: 1200px) {
+    .flores-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .contenedor {
+        padding: 0 2rem;
+    }
+}
+
+/* Ajustes para modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1a1a;
+        --text-color: #000000;
+    }
+
+    .logo {
+        border-color: var(--secondary-color);
+    }
+
+    .flor-card {
+        background: #f5d51f;
+    }
+
+    .flor-info p {
+        color: #000000;
+        
+        
+    }
+
+    nav {
+        background: #2a2a2a;
+    }
+}
+
+@keyframes logoEntrance {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.logo-container {
+    animation: logoEntrance 0.5s ease-out forwards;
+}
